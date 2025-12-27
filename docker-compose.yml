@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: digital_testv1.0.0
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://zzy:123455@db:5432/test1
+    depends_on:
+      - pgsl_db
+
+  pgsl_db:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: zzy
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: test_zzy
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
+
