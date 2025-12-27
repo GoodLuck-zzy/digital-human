@@ -4,3 +4,6 @@ websockets==15.0.1
 sqlalchemy==2.0.45
 psycopg2-binary==2.9.11
 redis==7.1.0
+faiss-cpu==1.13.2
+numpy==2.2.6
+sentence-transformers==5.2.0
