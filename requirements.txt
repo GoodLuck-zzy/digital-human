@@ -1,5 +1,6 @@
-fastapi
-uvicorn[standard]
-websockets
-sqlalchemy
-psycopg2-binary
+fastapi==0.127.1
+uvicorn[standard]==0.40.0
+websockets==15.0.1
+sqlalchemy==2.0.45
+psycopg2-binary==2.9.11
+redis==7.1.0
